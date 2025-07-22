@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.3.3"
+  version: "3.0.0"
 
 package:
   name: rsl-rl-lib
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/rsl-rl-lib/rsl_rl_lib-${{ version }}.tar.gz
-    sha256: a71ae8190a8d28331260d4c7815efc2a175a77fdf09180c47f55a96bab69d8de
+    sha256: c38936f8b6c199fabf2330706f976bbbe066526893a32d1cd39962764e28d1f5
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation .
@@ -25,8 +25,9 @@ requirements:
     - wheel
   run:
     - python >=${{ python_min }}
-    - pytorch >=1.10.0
+    - pytorch >=2.6.0
     - torchvision >=0.5.0
+    - tensordict >=0.7.0
     - numpy >=1.16.4
     - gitpython
     - onnx
