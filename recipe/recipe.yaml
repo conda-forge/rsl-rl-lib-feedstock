@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "5.4.2"
+  version: 5.5.0
 
 package:
   name: rsl-rl-lib
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/rsl-rl-lib/rsl_rl_lib-${{ version }}.tar.gz
-    sha256: 688e881db7f7af06d12e5498fd6f0c41b0e2f858dc0667f5fd68219c86b9667d
+    sha256: 26b5f2e8ee6f2d5bda38d4cc5e5b6420aa60cdbf108b1c131ac4a008bb29d943
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation .
@@ -26,7 +26,6 @@ requirements:
   run:
     - python >=${{ python_min }}
     - pytorch >=2.6.0
-    - torchvision >=0.5.0
     - tensordict >=0.7.0
     - numpy >=1.16.4
     - gitpython
