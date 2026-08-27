@@ -37,7 +37,9 @@ tests:
       imports:
         - rsl_rl
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Fast and simple RL algorithms implemented in PyTorch
