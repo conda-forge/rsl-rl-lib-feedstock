@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "5.5.2"
+  version: "6.0.0"
 
 package:
   name: rsl-rl-lib
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/rsl-rl-lib/rsl_rl_lib-${{ version }}.tar.gz
-    sha256: 5bafde369a794e46378d65a2b67a0887da91189ba8c398419e5d0de76b13f3ff
+    sha256: 897bd85901ea947611bc3e3d65f410acb1a7f0a8b9a5e5f9adc6b546ccc5a0db
 
 build:
   script: ${{ PYTHON }} -m pip install --no-deps --no-build-isolation .
